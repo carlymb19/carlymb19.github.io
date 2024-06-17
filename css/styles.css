@@ -1,0 +1,625 @@
+/*Carly Brown, July 19, Final Project*/
+
+/*universal styles*/
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+html {
+    --brand-blue: hsl(197, 96%, 18%);
+    --light-blue: hsl(186, 96.6%, 22.9%);
+    --teal: hsl(162, 77%, 29%);
+    --bright-teal: hsl(186, 95.9%, 29%);
+    --green: hsl(163, 96%, 18%);
+    --light-green: hsl(146, 97.1%, 27.3%);
+    --bright-green: hsl(146, 97%, 26%);
+    --dark-green: hsl(146, 94.9%, 15.5%);
+    --black: hsl(0, 0%, 0%);
+    --gray: hsl(210, 7%, 56%);
+    --light-gray: hsl(210, 17%, 95%);
+    --extra-light-gray: hsl(210, 17%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(0, 97%, 26%);
+
+    color: var(--text-color);
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+}
+
+.logo, .logo_name, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1em;
+}
+/*end of universal styles*/
+
+
+
+/*header styles*/
+.pair {
+    display: flex;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.logo {
+    font-size: 3.5em;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px var(--light-gray);
+    line-height: 0;
+    color: var(--brand-blue);
+    margin-right: .2em;
+}
+
+.logo_image {
+    height: 3.5em;
+}
+
+.logo_name {
+    font-size: 1em;
+    text-shadow: 1px 1px 1px var(--light-gray);
+    line-height: 0;
+    margin-top: 0;
+}
+/*end of header styles*/
+
+
+
+/*hamburger menu styles*/ /*credit to Keith J Grant's CSS in Depth textbook for providing me with this hamburger menu style*/
+.menu {
+    position: relative;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: -1.2em;
+    right: 0.1em;
+
+    border: 0;
+    background-color: transparent;
+
+    font-size: 3em;
+    width: 1em;
+    height: 1em;
+    line-height: 0.4;
+    text-indent: 5em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu-toggle::after {
+    position: absolute;
+    top: 0.2em;
+    left: 0.2em;
+    display: block;
+    content: "\2261";
+    text-indent: 0;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0;
+}
+
+.menu.is-open .menu-dropdown {
+    display: block;
+}
+
+.nav-menu {
+    margin: 0;
+    padding-left: 0;
+    border: 1px solid var(--light-blue);
+    list-style: none;
+    background-color: #fff;
+}
+
+.nav-menu > li + li {
+    border-top: 1px solid var(--light-blue);
+}
+
+.nav-menu > li > a {
+    display: block;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    color: black
+}
+/*end of hamburger menu styles*/
+
+
+
+/*link styles*/
+a {
+    color: var(--light-green);
+    text-decoration: none;
+}
+  
+a:visited {
+    color: var(--dark-green);
+}
+  
+a:hover {
+    color: var(--bright-teal);
+}
+  
+a:active {
+    color: var(--red);
+}
+
+header a {
+    text-decoration: none;
+}
+
+h1.logo a, h1.logo a:visited, h1.logo a:active {
+    color: var(--brand-blue);
+}
+
+h1.logo a:hover {
+    text-shadow: 2px 2px 2px var(--gray);
+}
+
+h2.logo_name a, h2.logo_name a:visited, h2.logo_name a:hover, h2.logo_name a:active {
+    color: var(--black);
+}
+
+a.phone {
+    color: var(--brand-blue);
+}
+
+a.phone:hover {
+    color: var(--bright-teal);
+}
+/*end of link styles*/
+
+
+
+/*text styles*/
+.bold {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.important {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+}
+/*end of text styles*/
+
+
+/*list styles*/
+li {
+    font-size: 1em;
+}
+
+.dotless {  
+    list-style-type: none;
+}
+
+ul.two-column {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+li.between-space {
+    margin-top: 16px;
+}
+
+.list-left {
+    padding-left: 0.5em;
+}
+
+.list-top {
+    margin-top: 0.8em;
+}
+/*end of list styles*/
+
+
+
+/*main styles*/
+main h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.7em;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+main h3 {
+    font-size: 1.3em;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+main p {
+    margin: 0.8em 0 0 0;
+}
+
+main ul {
+    margin: 1px 0 0 0;
+}
+
+.no-spacing {
+    margin: 0;
+}
+
+.tab {
+    margin-left: 0.5em;
+}
+
+.tab-more {
+    margin-left: 1.5em;
+}
+
+.pantry {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+}
+/*end of main styles*/
+
+
+/*images styles*/
+.hero {
+    display: block;
+    max-width: 90vw;
+    margin-top: 1.6em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heart {
+    display: block;
+    max-width: 70vw;
+    margin-top: 1.6em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services_image {
+    display: block;
+    max-width: 80vw;
+    margin-top: 1.6em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.training {
+    display: block;
+    max-width: 80vw;
+    margin-top: 1.6em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discover-page {
+    display: block;
+    max-width: 90vw;
+    margin-top: 1.6em;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*end of images styles*/
+
+
+
+/*footer styles*/
+footer {
+    margin: 2em -1em -1em -1em;
+    text-align: center;
+    background-color: var(--light-gray);
+    color: var(--gray);
+}
+
+footer p {
+    padding: 2em 2em 0 2em;
+}
+
+.copyright {
+    padding: 0 2em 2em 2em;
+}
+/*end of footer styles/*
+
+
+
+/*Medium viewport*/
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 90vw; 
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /*credit to Keith J Grant's CSS in Depth textbook for providing me with this large viewport navbar style*/
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-dropdown {
+        display: block;
+        position: static;
+    }
+
+    .nav-menu {
+        display: flex;
+        margin-top: 1.5em;
+        border: 0.1em solid;
+        padding: .5em 0 .5em 0;
+        box-shadow: 3px 3px 3px var(--gray);
+        text-shadow: 1px 1px var(--light-gray);
+        font-size: 1.05em;
+    }
+
+    .nav-menu > li {
+        flex: 1;
+    }
+
+    .nav-menu > li + li {
+        border: 0;
+    }
+
+    .nav-menu > li > a {
+        padding: 0.3em;
+        text-align: center;
+    }
+
+    .nav-menu > li > a:hover {
+        text-decoration: underline;
+    }
+
+    /*image styles*/
+    .hero {
+        max-width: 60vw;
+    }
+    
+    .heart {
+        max-width: 60vw;
+    }
+    
+    .services_image {
+        max-width: 80vw;
+    }
+
+    .chip {
+        max-width: 40vw;
+    }
+
+    .training {
+        max-width: 60vw;
+    }
+
+    .discover-page {
+        max-width: 80vw;
+    }
+
+    .discover-page.sketch {
+        max-width: 50vw;
+    }
+
+    .discover-page.style {
+        max-width: 60vw;
+    }
+    /**/
+
+    .services-space {
+        margin-bottom: 0.8em;
+    }
+
+    .services-list {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .services-list li {
+        padding: 3em;
+    }
+
+    .services-list a {
+        color: white;
+    }
+
+    .services-list a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    /*block one*/
+    li.brand-blue {
+        background-color: var(--brand-blue);
+        color: white;
+    }
+    li.brand-blue:hover {
+        background-color: var(--dark-green);
+    }
+
+    /*block two*/
+    li.light-blue {
+        background-color: var(--light-blue);
+        color: white;
+    }
+    li.light-blue:hover {
+        background-color: var(--light-green);
+        color: white;
+    }
+
+    /*block three*/
+    li.bright-teal {
+        background-color: var(--bright-teal);
+        color: white;
+    }
+    li.bright-teal:hover {
+        background-color: var(--teal);
+        color: white;
+    }
+
+    /*block four*/
+    li.teal {
+        background-color: var(--teal);
+        color: white;
+    }
+    li.teal:hover {
+        background-color: var(--bright-teal);
+        color: white;
+    }
+
+    /*block five*/
+    li.light-green {
+        background-color: var(--light-green);
+        color: white;
+    }
+    li.light-green:hover {
+        background-color: var(--light-blue);
+        color: white;
+    }
+
+    /*block six*/
+    li.dark-green {
+        background-color: var(--dark-green);
+        color: white;
+    }
+    li.dark-green:hover {
+        background-color: var(--brand-blue);
+        color: white;
+    }
+    
+    .right {
+        text-align: right;
+    }
+
+    ul.two-column-contact {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+
+    footer {
+        margin: 2em -3em -1em -3em;
+    }
+}
+
+/*Large viewport*/
+
+@media (min-width: 1366px) {
+    .wrapper {
+        width: 70vw; 
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero {
+        width: 40vw;
+    }
+    
+    .heart {
+        max-width: 40vw;
+    }
+    
+    .services_image {
+        max-width: 80vw;
+    }
+
+    .training {
+        max-width: 40vw;
+    }
+
+    .chip {
+        max-height: 30vw;
+    }
+
+    .discover-page {
+        max-width: 45vw;
+    }
+
+    .discover-page.style {
+        max-width: 30vw;
+        margin: 1em 20px;
+    }
+
+    img.discover-page.sketch {
+        max-width: 20vw;
+        margin: 1em 20px;
+    }
+
+    .row {
+        display: flex;
+    }
+    
+    .column {
+        flex: 50%;
+    }
+
+    .indent {
+        width: 50vw; 
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .indent-more {
+        width: 40vw; 
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .donate-list {
+        margin-left: 1em
+    }
+
+    .remembered {
+        margin-top: 2em;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer {
+        margin: 2em -15em -1em -15em;
+    }
+
+    .copyright {
+        padding: 0 1em 1em 1em;
+    }
+}
